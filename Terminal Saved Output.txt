@@ -1,0 +1,74 @@
+Last login: Tue Jul  1 14:09:43 on ttys000
+rajpahwa@Jabits-MBP ~ % source ~/.zshrc
+source: no such file or directory: /Users/rajpahwa/.zshrc
+rajpahwa@Jabits-MBP ~ % java -version
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+rajpahwa@Jabits-MBP ~ % export JAVA_HOME=$(/usr/libexec/java_home)
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+rajpahwa@Jabits-MBP ~ % bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+zsh: no such file or directory: bin/bash
+rajpahwa@Jabits-MBP ~ % brew install openjdk@17
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+Warning: openjdk@17 17.0.15 is already installed and up-to-date.
+To reinstall 17.0.15, run:
+  brew reinstall openjdk@17
+rajpahwa@Jabits-MBP ~ % sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+
+Password:
+rajpahwa@Jabits-MBP ~ % nano ~/.zshrc
+rajpahwa@Jabits-MBP ~ % 
+rajpahwa@Jabits-MBP ~ % ^[[200~export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+zsh: bad pattern: ^[[200~export
+rajpahwa@Jabits-MBP ~ % export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+rajpahwa@Jabits-MBP ~ % source ~/.zshrc                                 
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+rajpahwa@Jabits-MBP ~ % java -version
+
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+rajpahwa@Jabits-MBP ~ % /opt/homebrew/opt/openjdk@17
+zsh: no such file or directory: /opt/homebrew/opt/openjdk@17
+rajpahwa@Jabits-MBP ~ % java -version               
+
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+rajpahwa@Jabits-MBP ~ % To use the bundled JDK, set:
+  export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+zsh: command not found: To
+rajpahwa@Jabits-MBP ~ % sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+
+rajpahwa@Jabits-MBP ~ % nano ~/.zshrc
+
+  UW PICO 5.09              File: /Users/rajpahwa/.zshrc              Modified  
+
+
+
+
+
+
+
+
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+export JAVA_HOME=$(/usr/libexec/java_home -v17)
+
+
+
+
+
+
+
+
+
+                            [ Unknown Command: ^S ]                             
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  
